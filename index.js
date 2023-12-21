@@ -4,7 +4,7 @@ const axios = require('axios');
 
 const bot = new TelegramBot('6582714818:AAG1r6biFoJjkzN_dsDesuIh1TalDXFX6gk', { polling: true });
 
-const chatId = '1225183560';
+const chatId = '-4052460721';
 
 const numberWithCommas = (number) => {
   const formattedNumber = Number(number).toLocaleString('en-US');
@@ -63,6 +63,8 @@ const sendScheduledMessage = async () => {
 
     bot.sendMessage(chatId, `Rẻ nhất T5(22 âm): ${JSON.stringify(numberWithCommas(cheapeatT5))}`);
     bot.sendMessage(chatId, `Rẻ nhất T6(23 âm): ${JSON.stringify(numberWithCommas(cheapeatT6))}`);
+    console.log('Update price done!')
+
   } catch (error) {
     console.error('Error making POST request:', error.message);
   }
